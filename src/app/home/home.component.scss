@@ -1,0 +1,9 @@
+.pokeapi-container{
+  @apply  md:container;
+  @apply md:mx-auto;
+  @apply sm:flex;
+  @apply flex-col;
+  @apply md:grid;
+  @apply grid-cols-4;
+  @apply my-28;
+}

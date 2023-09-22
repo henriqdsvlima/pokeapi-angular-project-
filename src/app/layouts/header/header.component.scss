@@ -1,0 +1,59 @@
+/* Header Block */
+.header {
+  @apply fixed top-0 left-0 right-0 bg-gray-800 py-1 px-1 z-10;
+
+  /* Header__Container Element */
+  &__container {
+    @apply container mx-auto my-auto px-4 py-6 flex items-center justify-between;
+
+    /* Header__Logo Element */
+    &__logo {
+      @apply max-w-xs animate-pulse;
+    }
+
+    /* Header__Title Element */
+    &__title {
+      @apply text-white text-2xl;
+    }
+
+    /* Header__Nav Element */
+    &__nav {
+      @apply flex justify-end space-x-4;
+    }
+  }
+
+  /* Header__Filter Button Modifier */
+  &__filter {
+    @apply btn rounded-full;
+  }
+
+  /* Header__Modal Dialog Modifier */
+  &__modal {
+    @apply modal;
+  }
+
+  /* Header__Modal Box Modifier */
+  &__modal-box {
+    @apply modal-box;
+  }
+
+  /* Header__Dropdown Details Modifier */
+  &__dropdown {
+    @apply dropdown;
+  }
+
+  /* Header__Dropdown Summary Modifier */
+  &__dropdown-summary {
+    @apply m-1 btn;
+  }
+
+  /* Header__Dropdown Menu Modifier */
+  &__dropdown-menu {
+    @apply p-2 shadow menu dropdown-hover z-[1] bg-base-100 rounded-box w-52;
+  }
+
+  /* Header__Modal Action Modifier */
+  &__modal-action {
+    @apply modal-action;
+  }
+}

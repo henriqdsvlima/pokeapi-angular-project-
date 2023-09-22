@@ -1,0 +1,14 @@
+
+<main class="">
+  <app-header (searchPerformed)="onSearchPerformed($event)" ></app-header>
+  <div class="pokeapi-container " (scroll)="onScroll()">
+    <app-cards *ngFor="let pokemon of pokemons" [pokemon]="pokemon"></app-cards>
+  </div>
+  <button type="button" class="bg-indigo-500 flex justify-center items-center" [disabled]="isLoading">
+    <ng-container *ngIf="isLoading">
+
+    </ng-container>
+    Processing...
+  </button>
+</main>
+

@@ -1,0 +1,32 @@
+<article class="article-pokemon ">
+  <div class="flex justify-between items-center group relative " >
+    <img
+      alt="{{pokemon.name}}"
+      src="{{pokemon.sprites.front_default}}"
+      class="pokemon-image top-1/4 right-0 bottom-0 left-0"
+    />
+    <div class="stats-container group-hover:translate-y-0 group-hover:opacity-100">
+      <div>
+        <p *ngFor="let stats of pokemon.stats" class="stats-text">
+          {{stats.stat.name}}: {{stats.base_stat}}
+        </p>
+      </div>
+    </div>
+    <div>
+      <h3 class="pokemon-name">{{pokemon.name}}</h3>
+    </div>
+  </div>
+
+  <ul class="list-container">
+    <li class="list-item">
+      <small class="text-white-strong"><strong>type</strong></small>
+      <strong class="type-container" [style.background-color]="getBackgroundColor(type.type.name)" *ngFor="let type of pokemon.types">{{ type.type.name }}</strong>
+      <hr>
+      <small class="text-white-strong"><strong>Abilities</strong></small>
+
+      <strong *ngFor="let skill of pokemon.abilities" class="skill-container">
+        {{skill.ability.name}}
+      </strong>
+    </li>
+  </ul>
+</article>
